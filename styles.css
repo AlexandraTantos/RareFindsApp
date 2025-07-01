@@ -75,29 +75,6 @@ body {
   color: #333;
   text-decoration: none;
 }
-/* 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    right: 2rem;
-    background-color: white;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .toggle-nav {
-    display: block;
-    color: #333;
-  }
-} */
 
 .hero {
   text-align: center;
@@ -110,7 +87,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.btn {
+.homeBtn {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1.5rem;
@@ -386,7 +363,7 @@ body {
   }
   .bottom {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   .price {
     margin-bottom: 5px;
