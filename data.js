@@ -79,7 +79,7 @@ export const products = [
   },
   {
     id: 8,
-    name: "Mason Jar Indoor Herb Garden",
+    name: "Jar Indoor Herb Garden",
     price: 20.99,
     oldPrice: 25.99,
     image: "/images/mason-jar.png",
@@ -87,11 +87,11 @@ export const products = [
     brand: "CraftBarrel",
     rating: 4.1,
     description:
-      "These vintage-inspired planters use a passive hydroponic system that makes it easy to grow your own herbs.",
+      "These planters use a passive hydroponic system that makes it easy to grow your own herbs.",
   },
   {
     id: 9,
-    name: "Birth Month Flower Printed Glass",
+    name: "Birth Month Flower Glass",
     price: 26.99,
     oldPrice: 30.99,
     image: "/images/flower-glass.png",
@@ -99,6 +99,54 @@ export const products = [
     brand: "CraftBarrel",
     rating: 5.0,
     description:
-      "Toast your solar return all year long using glassware with printed images of your birth month flower.",
+      "Toast your solar return all year long using glass with printed images of your birth flower.",
+  },
+  {
+    id: 10,
+    name: "Yellowstone Mug",
+    price: 6.99,
+    oldPrice: 9.99,
+    image: "/images/yellowstone-mug.png",
+    category: "Gifts",
+    brand: "CraftBarrel",
+    rating: 5.0,
+    description:
+      "Night falls and constellations glow on a moonlit addition to the Yellowstone mug.",
+  },
+  {
+    id: 11,
+    name: "Sweet Candles",
+    price: 5.99,
+    oldPrice: 9.99,
+    image: "/images/sweet-candles.png",
+    category: "Gifts",
+    brand: "CraftBarrel",
+    rating: 4.3,
+    description:
+      "Fill your space with warmth and comfort thanks to these hand-poured scented candles.",
+  },
+  {
+    id: 12,
+    name: "Who Is She Game",
+    price: 26.99,
+    oldPrice: 34.99,
+    image: "/images/who-is-she.png",
+    category: "Gifts",
+    brand: "CraftBarrel",
+    rating: 4.8,
+    description:
+      "A fun and engaging party game to test your wit and discover the mystery guest.",
+  },
+  {
+    id: 13,
+    name: "Weather Glass",
+    price: 16.99,
+    oldPrice: 24.99,
+    image: "/images/weather-changing-glass.png",
+    category: "Gifts",
+    brand: "CraftBarrel",
+    rating: 3.8,
+    description:
+      "An elegant glass that changes appearance based on the weather outside.",
   },
 ];

@@ -269,7 +269,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-top: 35px;
 }
 .price {
   display: flex;
@@ -366,7 +366,7 @@ body {
     align-items: center;
   }
   .price {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
   .btn {
     width: 100%;
