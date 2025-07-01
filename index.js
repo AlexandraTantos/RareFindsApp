@@ -6,6 +6,49 @@ window.addEventListener("DOMContentLoaded", function () {
   const productsPageSection = document.querySelector("#products-page");
   const featuredSection = document.querySelector("#featured");
   const searchInput = document.querySelector(".input");
+  const brandFilter = document.querySelector("#brand-filter");
+  const categoryFilter = document.querySelector("#category-filter");
+  const ratingFilter = document.querySelector("#rating-filter");
+  const clearButton = this.document.querySelector(".filters-bar-clear-button");
+
+  brandFilter.addEventListener("change", filterProducts);
+  categoryFilter.addEventListener("change", filterProducts);
+  ratingFilter.addEventListener("change", filterProducts);
+  clearButton.addEventListener("click", () => {
+    brandFilter.value = "";
+    categoryFilter.value = "";
+    ratingFilter.value = "";
+
+    displayProducts(products, productsPageSection);
+  });
+
+  function filterProducts() {
+    const selectedBrand = brandFilter.value;
+    const selectedCategory = categoryFilter.value;
+    const selectedRating = parseFloat(ratingFilter.value);
+
+    let filtered = [...products];
+
+    if (selectedBrand) {
+      filtered = filtered.filter((p) => p.brand === selectedBrand);
+    }
+
+    if (selectedCategory) {
+      filtered = filtered.filter((p) => p.category === selectedCategory);
+    }
+
+    if (selectedRating) {
+      filtered = filtered.filter((p) => p.rating >= selectedRating);
+    }
+
+    if (productsPageSection) {
+      if (filtered.length > 0) {
+        displayProducts(filtered, productsPageSection);
+      } else {
+        productsPageSection.innerHTML = `<p class="no-results">No products found!</p>`;
+      }
+    }
+  }
 
   toggleButton.addEventListener("click", () => {
     navLinks.classList.toggle("hidden");

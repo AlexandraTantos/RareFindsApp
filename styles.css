@@ -38,28 +38,36 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
 .nav-links {
   position: absolute;
-  top: 60px;
-  left: 20px;
+  top: 40px;
+  left: 30px;
   background-color: #fff;
   border-radius: 8px;
-  padding: 0.5rem 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  z-index: 100;
+  width: 220px;
+  list-style: none;
 }
 
 .nav-links.hidden {
   display: none;
 }
 
-.nav-link {
+.nav-links li a {
   text-decoration: none;
   color: #333;
-  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-links li a:hover {
+  background-color: #f0f0f0;
 }
 
 .cart-icon {
@@ -156,12 +164,13 @@ body {
   background-color: #faf1e6;
 }
 .search-bar input {
-  width: 200px;
+  width: 300px;
   font-size: 18px;
   padding: 10px 20px 10px 45px;
   border-radius: 12px;
   border: none;
   box-shadow: 0px 2px 5px rgba(20, 15, 15, 0.2);
+  font-size: 16px;
 }
 .search-bar input:focus {
   outline: none;
@@ -186,6 +195,10 @@ body {
 .filters-bar-item {
   margin-inline-end: 4px;
   position: static;
+  width: 170px;
+  appearance: none;
+  font-size: 1.15rem;
+  cursor: pointer;
 }
 
 .filters-bar-item-button {
@@ -202,9 +215,11 @@ body {
   border: 2px solid #d6c0b3;
   background-color: white;
 }
+
 .filters-bar-clear {
   display: flex;
 }
+
 .filters-bar-clear-button {
   background-color: #faf1e6;
   text-align: center;
@@ -217,13 +232,13 @@ body {
 }
 
 .card {
-  width: 330px;
+  width: 300px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
   font-family: "Segoe UI", sans-serif;
-  margin: 20px auto;
+  margin: 20px 10px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -333,20 +348,45 @@ body {
   font-weight: 600;
   color: #22c55e;
 }
-@media (max-width: 400px) {
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 30px;
+  }
+  .filters {
+    position: relative;
+    box-shadow: none;
+  }
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin-inline-start: 30px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-inline-start: 0;
+  }
+
+  .filters-bar {
+    width: 100%;
+    margin-block-start: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
   .card {
-    width: 90%;
+    width: 60%;
   }
   .title {
     font-size: 16px;
   }
   .img {
-    height: 180px;
+    height: 150px;
   }
   .bottom {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
   }
   .price {
     margin-bottom: 5px;
