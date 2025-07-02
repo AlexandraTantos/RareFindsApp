@@ -1,15 +1,54 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/cartStyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
-    <script src="" async defer></script>
+    <header class="navbar">
+      <div class="navbar-left">
+        <button class="toggle-nav">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="logo-text">Rare Finds</h1>
+      </div>
+
+      <ul class="nav-links hidden">
+        <li><a href="/pages/index.html" class="nav-link">Home</a></li>
+        <li><a href="/pages/products.html" class="nav-link">Products</a></li>
+        <li><a href="/pages/about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <div class="navbar-right">
+        <a href="/pages/cart.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </div>
+    </header>
+    <main class="cart-container">
+      <h1 class="cart-title">Your Shopping Cart</h1>
+      <div class="cart-items-container"></div>
+
+      <section class="cart-summary">
+        <p>Subtotal: <span>17.99</span></p>
+        <p>TVA (20%): <span>3.60</span></p>
+        <h2>Total: <span>21.59</span></h2>
+        <div class="cart-buttons">
+          <button class="checkout-btn">
+            <a class="back" href="/pages/products.html"
+              >Back To Products</a
+            ></button
+          ><button class="checkout-btn">Checkout</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/cart.js" type="module"></script>
   </body>
 </html>

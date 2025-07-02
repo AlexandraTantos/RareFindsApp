@@ -99,14 +99,21 @@ const displayProducts = (products, container) => {
     <span class="old">$${item.oldPrice}</span>
     <span class="new">$${item.price}</span>
    </div>
-   <button class="btn">
-    <span>Add to Cart</span>
-    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-     <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4"/>
-     <line x1="3" y1="6" x2="21" y2="6"/>
-     <path d="M16 10a4 4 0 01-8 0"/>
-    </svg>
-   </button>
+   <button 
+  class="btn"
+  data-id="${item.id}" 
+  data-name="${item.name}" 
+  data-price="${item.price}" 
+  data-image="${item.image}"
+>
+  <span>Add to Cart</span>
+  <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4"/>
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <path d="M16 10a4 4 0 01-8 0"/>
+  </svg>
+</button>
+
   </div>
   <div class="meta">
    <div class="rating">
@@ -121,4 +128,37 @@ const displayProducts = (products, container) => {
     .join("");
 
   container.innerHTML = `<div class="product-list">${displayProduct}</div>`;
+  document.querySelectorAll(".btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const product = {
+        id: btn.dataset.id,
+        name: btn.dataset.name,
+        price: parseFloat(btn.dataset.price),
+        image: btn.dataset.image,
+        quantity: 1,
+      };
+      addToCart(product);
+    });
+  });
+};
+
+const addToCart = (product) => {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(product);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  Toastify({
+    text: `${product.name} added to cart!`,
+    duration: 3000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: true,
+    gravity: "top",
+    position: "center",
+    stopOnFocus: true,
+    style: {
+      background:
+        "linear-gradient(to right,rgb(155, 116, 79),rgb(103, 53, 20))",
+    },
+    onClick: function () {},
+  }).showToast();
 };
