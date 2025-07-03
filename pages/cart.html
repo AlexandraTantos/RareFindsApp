@@ -31,24 +31,44 @@
         </a>
       </div>
     </header>
-    <main class="cart-container">
-      <h1 class="cart-title">Your Shopping Cart</h1>
-      <div class="cart-items-container"></div>
+    <div class="cart-page">
+      <main class="cart-container">
+        <div class="cart-items-container"></div>
+      </main>
+      <aside class="cart-details">
+        <section class="coupons">
+          <p>Coupons</p>
+          <span><i class="fa fa-tag" aria-hidden="true"></i></span>
+          <input type="text" placeholder="Promo Code" />
+          <button>Apply</button>
+        </section>
 
-      <section class="cart-summary">
-        <p>Subtotal: <span>17.99</span></p>
-        <p>TVA (20%): <span>3.60</span></p>
-        <h2>Total: <span>21.59</span></h2>
-        <div class="cart-buttons">
-          <button class="checkout-btn">
-            <a class="back" href="/pages/products.html"
-              >Back To Products</a
-            ></button
-          ><button class="checkout-btn">Checkout</button>
-        </div>
-      </section>
-    </main>
+        <section class="gifting">
+          <p>Gifting</p>
+          <div class="gift-container">
+            <p>Buying for a loved one?</p>
+            <p>Send personalized message at $10</p>
+            <button>Add gift wrap</button>
+          </div>
+        </section>
 
+        <section class="cart-summary">
+          <p>Price Details</p>
+          <p>Subtotal: <span>17.99</span></p>
+          <p>TVA (20%): <span>3.60</span></p>
+          <p>Delivery Charges: <span>Free Delivery</span></p>
+          <h2>Total Amount: <span>21.59</span></h2>
+          <div class="cart-buttons">
+            <button class="checkout-btn">
+              Place order
+              <span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </button>
+          </div>
+        </section>
+      </aside>
+    </div>
     <script src="/cart.js" type="module"></script>
   </body>
 </html>

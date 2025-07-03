@@ -23,15 +23,17 @@ export const products = [
   },
   {
     id: 3,
-    name: "Dad Mug",
-    price: 9.99,
-    oldPrice: 13.49,
-    image: "/images/dad-mug.png",
+    name: "Sweet Candles",
+    price: 5.99,
+    oldPrice: 9.99,
+    image: "/images/sweet-candles.png",
     category: "Gifts",
-    brand: "GiftedCo",
+    brand: "CraftBarrel",
     rating: 4.3,
-    description: "A thoughtful mug gift for the best dad ever.",
+    description:
+      "Fill your space with warmth and comfort thanks to these hand-poured scented candles.",
   },
+
   {
     id: 4,
     name: "It Was Never A Dress Mug",
@@ -114,16 +116,14 @@ export const products = [
       "Night falls and constellations glow on a moonlit addition to the Yellowstone mug.",
   },
   {
-    id: 11,
-    name: "Sweet Candles",
-    price: 5.99,
-    oldPrice: 9.99,
-    image: "/images/sweet-candles.png",
+    name: "Dad Mug",
+    price: 9.99,
+    oldPrice: 13.49,
+    image: "/images/dad-mug.png",
     category: "Gifts",
-    brand: "CraftBarrel",
+    brand: "GiftedCo",
     rating: 4.3,
-    description:
-      "Fill your space with warmth and comfort thanks to these hand-poured scented candles.",
+    description: "A thoughtful mug gift for the best dad ever.",
   },
   {
     id: 12,

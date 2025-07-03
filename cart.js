@@ -24,7 +24,7 @@ const renderCart = () => {
           <button class="increase" data-index="${index}">+</button>
         </div>
       </div>
-      <button class="remove-btn" data-index="${index}">Remove</button>
+      <button class="remove-btn" data-index="${index}"><i class="fas fa-times"></i></button>
     `;
     container.appendChild(itemEl);
   });
