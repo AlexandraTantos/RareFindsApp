@@ -190,9 +190,12 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   gap: 20px;
+  align-items: flex-start;
 }
 .cart-details {
   width: 500px;
+  position: sticky;
+  top: 0;
 }
 
 .gifting {
@@ -338,6 +341,13 @@ body {
     font-size: 14px;
     cursor: pointer;
   }
+  .cart-item {
+    display: block;
+    position: relative;
+  }
+  .cart-item img {
+    width: 100%;
+  }
   .cart-title {
     font-size: 10px;
   }
@@ -352,5 +362,20 @@ body {
     width: 90%;
     max-width: 500px;
     text-align: center;
+  }
+  .cart-container {
+    width: 60%;
+    align-items: center;
+  }
+  .item-details {
+    text-align: center;
+  }
+  .quantity {
+    justify-content: center;
+  }
+  .remove-btn {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
   }
 }
